@@ -1,0 +1,5 @@
+must:Movement, shooting, astoriod spawning
+should: background, more than 1 level, splitting astroides, no borders
+could:
+would: menu
+not: enemy space ships.
