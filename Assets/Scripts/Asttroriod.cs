@@ -47,10 +47,13 @@ public class Asttroriod : MonoBehaviour {
 	{
 		if(col.collider.gameObject.name=="Bullet")
 		{
-			Destroy(col.collider.gameObject);
-			for(int i=0;i<Mathf.Floor(Random.value*4);i++)
+			if(Split=0)
 			{
-				Instantiate(
+				Destroy(col.collider.gameObject);
+				for(int i=0;i<Mathf.Floor(Random.value*4);i++)
+				{
+					Instantiate();
+				}
 			}
 		}
 	}
