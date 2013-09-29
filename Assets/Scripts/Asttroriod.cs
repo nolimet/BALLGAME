@@ -45,7 +45,7 @@ public class Asttroriod : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.collider.gameObject.name=="Bullet")
+		if(col.collider.gameObject.name=="(Clone)Bullet")
 		{
 			if(Split==0)
 			{
