@@ -45,16 +45,36 @@ public class Asttroriod : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.collider.gameObject.name=="(Clone)Bullet")
+		
+	}
+	
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.tag=="Bullet")
 		{
 			if(Split==0)
 			{
-				Destroy(col.collider.gameObject);
 				for(int i=0;i<Mathf.Floor(Random.value*4)+1;i++)
 				{
-					//Instantiate();
+					Instantiate(Resources.Load("Bullet"), transform.localPosition,transform.rotation);
 				}
 			}
-		}
+			else if (Split==1)
+			{
+				for(int i=0;i<Mathf.Floor(Random.value*4)+1;i++)
+				{
+					Instantiate(Resources.Load("Bullet"), transform.localPosition,transform.rotation);
+				}
+			}
+			else if (Split==2)
+			{
+				for(int i=0;i<Mathf.Floor(Random.value*4)+1;i++)
+				{
+					Instantiate(Resources.Load("Bullet"), transform.localPosition,transform.rotation);
+				}
+			}
+			Destroy(other.gameObject);
+			Destroy(gameObject);
+		}	
 	}
 }
